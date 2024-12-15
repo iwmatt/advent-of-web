@@ -1,4 +1,7 @@
 :root {
+    --base-color: hsl(210, 50%, 50%);
+    --base-hue: green;
+    --secondary-color: hsl(330, 70%, 60%);
 }
 
 .colors-card,
@@ -10,6 +13,10 @@
     .color {
         height: 80px;
     }
+}
+
+.dynamic-colors-card {
+    background: hsl(var(--base-hue), 70%, 60%);
 }
 
 .colors-card {
