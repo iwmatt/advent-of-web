@@ -13,4 +13,15 @@
     background: #ffcc00;
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation-name: colorView;
+    animation-duration: 1ms;
+    animation-timeline: view(y);
+    scale: 0.5;
+}
+
+@keyframes colorView {
+    100% {
+        background: #df4b06;
+        scale: 1;
+    }
 }
