@@ -24,8 +24,47 @@
     margin-bottom: 10px;
     padding: 16px;
     border: 1px solid #333;
+    animation-name: tabTransition;
+    animation-duration: 1ms;
+    animation-timeline: --contentTransition;
+}
+
+@keyframes tabLeave {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes tabJoin {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
 
 #content {
+    view-transition-name: --contentTransition;
     margin-top: 20px;
+}
+
+::view-transition-group(--contentTransition) {
+    animation-duration: 0.2s;
+}
+
+::view-transition-old(--contentTransition) {
+    animation-name: tabLeave;
+}
+
+::view-transition-new(--contentTransition) {
+    animation-name: tabJoin;
 }
