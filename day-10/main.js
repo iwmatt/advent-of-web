@@ -10,9 +10,9 @@ const oldReversed = [];
 const oldSpliced = [];
 
 // New Methods (Immutable)
-const newSorted = [];
-const newReversed = [];
-const newSpliced = [];
+const newSorted = numbers.toSorted();
+const newReversed = names.toReversed();
+const newSpliced = tasks.toSpliced(-1);
 
 // Output Results
 const output = document.getElementById("output");
