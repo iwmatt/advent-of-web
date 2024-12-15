@@ -10,10 +10,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 16px;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
+    accent-color: red;
 }
 
 progress {
