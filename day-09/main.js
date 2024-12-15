@@ -8,9 +8,7 @@ const transactions = [
   { id: 5, amount: 300, category: "Transport" },
 ];
 
-// Group transactions by category using Object.groupBy
-const groupedTransactions = {};
-
+const groupedTransactions = Object.groupBy(transactions, (tx) => tx.category);
 // Render grouped transactions
 const groupedTransactionsContainer = document.getElementById(
   "grouped-transactions",
